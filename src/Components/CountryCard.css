@@ -1,0 +1,91 @@
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: var(--black);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.card .flag {
+    width: 100%;
+}
+
+.card .flag img {
+    width: 100%;
+}
+
+.card .country-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .5rem;
+}
+
+.card .col {
+    display: flex;
+    flex-direction: column;
+}
+
+.country-name .capital {
+    color: var(--secondary);
+    font-size: 1.5rem;
+}
+
+.card .country-name .common-name {
+    color: var(--primary);
+    text-align: center;
+    padding: .5rem;
+}
+
+.card .country-name .official-name {
+    color: var(--white);
+    text-align: center;
+    padding: .2rem;
+    font-size: 1.2rem;
+}
+
+.card .independent {
+    width: 100%;
+    color: var(--black);
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .5rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    word-spacing: 1rem;
+    border-radius: .5rem;
+}
+
+.card .currency {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    padding: .5rem;
+}
+
+.currency .title {
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.currency .currency-name {
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.currency .currency-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+
+.currency .currency-symbol {
+    color: var(--yellow);
+    font-size: 2rem;
+}

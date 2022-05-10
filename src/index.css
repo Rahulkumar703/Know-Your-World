@@ -1,0 +1,26 @@
+:root {
+    --primary: #f02832;
+    --secondary: #8528f0;
+    --black: #202527;
+    --white: #ffffff;
+    --green: #68f79c;
+    --red: #f16c7c;
+    --yellow: #fdff6c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 786px) {
+    html {
+        font-size: 50%;
+    }
+}
