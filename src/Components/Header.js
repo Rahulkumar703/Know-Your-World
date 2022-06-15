@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import globe_img from '../Assets/imgs/globe150x150.png'
 import './Header.css';
@@ -6,15 +6,27 @@ import './Header.css';
 function Header(props) {
 
     const [search, setSearch] = useState('');
+    const [bigNavSize, setBigNavSize] = useState(true);
+
+    useEffect(() => {
+        props.getSearch(search);
+    }, [search, props]);
+
+    window.onscroll = () => {
+        if (window.scrollY >= 150) {
+            setBigNavSize(false);
+        }
+        else setBigNavSize(true);
+
+    }
 
 
     const searchFormSubmit = (e) => {
         e.preventDefault();
-        props.getSearch(search);
     }
 
     return (
-        <header>
+        <header className={bigNavSize ? 'nav' : 'nav mini-nav'}>
             <div className="title">
                 <Link to="/" >
                     <h1>Know Your W
@@ -34,5 +46,7 @@ function Header(props) {
         </header >
     );
 }
+
+
 
 export default Header;

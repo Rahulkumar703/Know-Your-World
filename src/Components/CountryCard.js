@@ -3,7 +3,6 @@ import './CountryCard.css'
 
 function CountryCard(props) {
     const {
-        id,
         commonName,
         officialName,
         independent,
@@ -22,10 +21,15 @@ function CountryCard(props) {
         coatOfArms,
         startOfWeek
 
-    } = props
+    } = props;
+
+    const expandCard = (e) => {
+        console.log(commonName);
+    }
+
     return (
 
-        <div className='card'>
+        <div className='card' onClick={expandCard}>
             <div className="flag">
                 <img src={flag} alt="flag" />
             </div>
@@ -37,27 +41,6 @@ function CountryCard(props) {
                 <div className="col">
                     <h3 className="capital">{capital}</h3>
                 </div>
-            </div>
-            <div className="currency">
-                <div className="title">
-                    <h3>Currencies</h3>
-                </div>
-                <div className="currency-name">
-                    {currencies ? Object.entries(currencies).map(a => {
-                        for (let i = 0; i < a.length / 2; i++) {
-                            return (
-                                <div className='currency-name-row' key={a[i]}>
-                                    <span className='currency-code'>{a[i]}</span>
-                                    <span className='currency-fullname'>{a[i + 1].name}</span>
-                                    <span className='currency-symbol'>{a[i + 1].symbol}</span>
-                                </div>
-                            );
-                        }
-                    }) : ''}
-                </div>
-            </div>
-            <div className='independent' style={independent ? { background: "var(--green)" } : { background: "var(--red)" }}>
-                {independent ? <p>Independent</p> : <p>Not Independent</p>}
             </div>
         </div>
     );

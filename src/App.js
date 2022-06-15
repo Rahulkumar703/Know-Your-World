@@ -6,8 +6,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 function App() {
 
-  const [searchWord, setSearchWord] = useState('');
-
+  const [searchWord, setSearchWord] = useState();
   const getSearch = searchWord => {
     setSearchWord(searchWord);
   }

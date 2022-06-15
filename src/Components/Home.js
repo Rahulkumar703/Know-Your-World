@@ -12,25 +12,23 @@ function Home(props) {
     const [filteredData, setFilteredData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const apiCall = async () => {
-        const res = await axios.get('https://restcountries.com/v3.1/all');
-        return res.data;
-    }
+
+
 
     useEffect(() => {
-        return async () => {
-            setIsLoading(true);
-            const apiData = await apiCall();
-            setIsLoading(false);
-            setData(apiData);
-        };
+        axios.get('https://restcountries.com/v3.1/all')
+            .then(res => res.data)
+            .then(data => {
+                setData(data);
+                setIsLoading(false);
+            })
     }, []);
+
     useEffect(() => {
-        return () => {
-            const filteredData = data.filter(d => d.name.official.toLowerCase().includes(searchWord.toLowerCase()));
-            setFilteredData(filteredData)
-        };
-    }, [searchWord]);
+        const filtered = data.filter(e => e.name.common.toLowerCase().includes(searchWord.toLowerCase()));
+        setFilteredData(filtered);
+
+    }, [searchWord, data])
 
 
     return (
