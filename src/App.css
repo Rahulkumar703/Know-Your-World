@@ -1,6 +1,5 @@
 .App {
     width: 100%;
     background: var(--white);
-
     overflow-x: hidden;
 }

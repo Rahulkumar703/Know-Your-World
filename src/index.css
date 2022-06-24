@@ -23,8 +23,38 @@ html {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 800px) {
     html {
         font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    html {
+        font-size: 40%;
+    }
+
+    .nav {
+        flex-direction: column;
+        height: 15rem;
+    }
+
+    .home {
+        margin-top: 15rem;
+    }
+
+    .title a {
+        font-size: 1.8rem;
+    }
+
+
+    .search-box .input-box {
+        width: 100%;
     }
 }

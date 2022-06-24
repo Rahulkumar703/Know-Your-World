@@ -36,7 +36,6 @@ window.env = {
   "MSYSTEM_CARCH": "x86_64",
   "MSYSTEM_CHOST": "x86_64-w64-mingw32",
   "MSYSTEM_PREFIX": "C:/Program Files/Git/mingw64",
-  "NAME": "Devil",
   "NODE": "C:\\Program Files (x86)\\nodejs\\node.exe",
   "npm_command": "run-script",
   "npm_config_cache": "C:\\Users\\Devil\\AppData\\Local\\npm-cache",
