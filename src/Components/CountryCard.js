@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CountryCard.css'
 
 function CountryCard(props) {
@@ -22,14 +22,16 @@ function CountryCard(props) {
         // startOfWeek
 
     } = props;
+    const [isExpanded, setIsExpanded] = useState(false)
+
 
     const expandCard = (e) => {
-        console.log(commonName);
+        setIsExpanded(true);
     }
 
     return (
 
-        <div className='card' onClick={expandCard}>
+        <div className={isExpanded ? 'card expanded' : 'card'} onClick={expandCard}>
             <div className="flag">
                 <img src={flag} alt="flag" />
             </div>

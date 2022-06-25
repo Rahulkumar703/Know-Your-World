@@ -4,6 +4,6 @@
     margin-top: 10rem;
     background: var(--white);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
     grid-gap: 2rem;
 }
