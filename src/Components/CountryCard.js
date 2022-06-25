@@ -5,21 +5,21 @@ function CountryCard(props) {
     const {
         commonName,
         officialName,
-        independent,
-        currencies,
+        // independent,
+        // currencies,
         capital,
-        subregion,
-        languages,
-        landlocked,
-        area,
-        map,
-        population,
-        carSide,
-        timezones,
-        continent,
+        // subregion,
+        // languages,
+        // landlocked,
+        // area,
+        // map,
+        // population,
+        // carSide,
+        // timezones,
+        // continent,
         flag,
-        coatOfArms,
-        startOfWeek
+        // coatOfArms,
+        // startOfWeek
 
     } = props;
 

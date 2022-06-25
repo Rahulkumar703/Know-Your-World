@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background: var(--black);
+    background: linear-gradient(-120deg, #1b1b1b, #313030);
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5), inset -5px -5px 15px rgba(255, 255, 255, 0.5);
     padding: .5rem;
     border-radius: .5rem;
     cursor: pointer;
@@ -23,6 +24,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: .5rem;
+    -webkit-user-select: none;
     user-select: none;
 }
 
